@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_current_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="56dp"
+        android:paddingBottom="62dp">
+
+        <TextView
+            android:id="@+id/current_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-regular"
+            android:lineSpacingExtra="16sp"
+            android:textColor="#2A2A2A"
+            android:textSize="96sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/current_temperature_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/current_temperature"
+            android:layout_toRightOf="@id/current_temperature"
+            android:fontFamily="sans-serif-regular"
+            android:lineSpacingExtra="16sp"
+            android:text="@string/degree"
+            android:textAlignment="center"
+            android:textColor="#2A2A2A"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_temperature"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-thin"
+            android:lineSpacingExtra="16sp"
+            android:textAlignment="center"
+            android:textColor="#556799"
+            android:textSize="36sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@drawable/border_shadow"
+        android:id="@+id/weather_recycler_view"
+        android:name="com.arunkumar.wefore.activities.MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_current_temp"
+        android:paddingTop="16dp"
+        tools:context="com.arunkumar.wefore.WeatherInfoActivity"
+        tools:listitem="@layout/weather_forecast_list_item" />
+
+</RelativeLayout>

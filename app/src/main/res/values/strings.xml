@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeFore</string>
+
+    <string name="title">Turn Location Service On</string>
+    <string name="message">Location is turned off. Click OK to go to Settings to turn on Location service</string>
+    <string name="degree">o</string>
+    <string name="error_message">Something\nwent wrong\nat our end!</string>
+    <string name="retry">RETRY</string>
+</resources>
